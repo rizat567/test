@@ -10,15 +10,15 @@ myImage.onclick = function() {
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h3');
 function setUserName() {
-  var myName = prompt('Please enter your name.');
+  var myName = prompt('Пожалуйста введите ваше имя.');
   localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  myHeading.innerHTML = 'Добро пожаловать, ' + myName;
 }
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+  myHeading.innerHTML = 'Добро пожаловать, ' + storedName;
 }
 myButton.onclick = function() {
     console.log('clicked')
